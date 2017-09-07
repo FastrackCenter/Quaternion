@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Quaternion</title>
+		<script type="text/javascript" src="../lib/quaternion.js"></script>
+		<script>
+
+			document.addEventListener('DOMContentLoaded', function(event) {
+
+				var quaternion = new Quaternion();
+
+				quaternion.setSeeds('Fastrack');
+
+				var screenCanvas = {
+					width: 400,
+					height: 400
+				};
+
+				var screenLeftCanvas = document.getElementById('left');
+				screenLeftCanvas.width = screenCanvas.width;
+				screenLeftCanvas.height = screenCanvas.height;
+
+				var screenRightCanvas = document.getElementById('right');
+				screenRightCanvas.width = screenCanvas.width;
+				screenRightCanvas.height = screenCanvas.height;
+
+				quaternion.setSpaceSize(
+					Math.round(screenCanvas.width * 0.65),
+					Math.round(screenCanvas.height * 0.65),
+					Math.round(screenCanvas.width * 0.65),
+					Math.round(screenCanvas.width * 0.175)
+				);
+
+				quaternion.generateParticles();
+
+				quaternion.render(screenLeftCanvas, -9);
+				quaternion.render(screenRightCanvas, 9);
+			});
+		</script>
+		<style>
+			body {
+				background: black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="left"></canvas>
+		<canvas id="right"></canvas>
+	</body>
+</html>

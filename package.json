@@ -1,0 +1,28 @@
+{
+  "name": "quaternionlib",
+  "version": "0.0.1",
+  "description": "Generator for fastrack-style particle system",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FastrackCenter/Quaternion.git"
+  },
+  "keywords": [
+	"fastrack",
+	"particle"
+  ],
+  "author": "Fred Chien <cfsghost@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FastrackCenter/Quaternion/issues"
+  },
+  "homepage": "https://github.com/FastrackCenter/Quaternion#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "webpack": "^3.5.5"
+  }
+}
